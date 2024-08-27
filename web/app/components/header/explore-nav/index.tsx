@@ -20,7 +20,7 @@ const ExploreNav = ({
   const actived = selectedSegment === 'explore'
 
   return (
-    _
+    <a href="#">_</a>
   )
 }
 
