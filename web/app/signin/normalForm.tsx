@@ -270,28 +270,8 @@ const NormalForm = () => {
           <div className="w-hull text-center block mt-2 text-xs text-gray-600">
             {t('login.tosDesc')}
             &nbsp;
-            <Link
-              className='text-primary-600'
-               rel='noopener noreferrer'
-              href='#'
-            >{t('login.tos')}</Link>
-            &nbsp;&&nbsp;
-            <Link
-              className='text-primary-600'
-               rel='noopener noreferrer'
-              href='#'
-            >{t('login.pp')}</Link>
+            
           </div>
-
-          {IS_CE_EDITION && <div className="w-hull text-center block mt-2 text-xs text-gray-600">
-            {t('login.goToInit')}
-            &nbsp;
-            <Link
-              className='text-primary-600'
-              href='/install'
-            >{t('login.setAdminAccount')}</Link>
-          </div>}
-
         </div>
       </div>
     </>
