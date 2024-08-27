@@ -272,14 +272,14 @@ const NormalForm = () => {
             &nbsp;
             <Link
               className='text-primary-600'
-              target='_blank' rel='noopener noreferrer'
-              href='https://dify.ai/terms'
+               rel='noopener noreferrer'
+              href='#'
             >{t('login.tos')}</Link>
             &nbsp;&&nbsp;
             <Link
               className='text-primary-600'
-              target='_blank' rel='noopener noreferrer'
-              href='https://dify.ai/privacy'
+               rel='noopener noreferrer'
+              href='#'
             >{t('login.pp')}</Link>
           </div>
 
