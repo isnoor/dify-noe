@@ -149,6 +149,15 @@ export default function AppSelector({ isMobile }: IAppSelecotr) {
                         <ArrowUpRight className='hidden w-[14px] h-[14px] text-gray-500 group-hover:flex' />
                       </Link>
                     </Menu.Item>
+                    <Menu.Item>
+                      <Link
+                        className={classNames(itemClassName, 'group justify-between')}
+                        href='https://roadmap.dify.ai'
+                        target='_blank' rel='noopener noreferrer'>
+                        <div>{t('common.userProfile.roadmap')}</div>
+                        <ArrowUpRight className='hidden w-[14px] h-[14px] text-gray-500 group-hover:flex' />
+                      </Link>
+                    </Menu.Item>
                     {
                       document?.body?.getAttribute('data-public-site-about') !== 'hide' && (
                         <Menu.Item>
