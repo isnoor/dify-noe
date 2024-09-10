@@ -17,7 +17,7 @@ const ExploreNav = ({
 }: ExploreNavProps) => {
   const { t } = useTranslation()
   const selectedSegment = useSelectedLayoutSegment()
-  const actived = selectedSegment === 'explore'
+  const activated = selectedSegment === 'explore'
 
   return (
     <a href="#">_</a>
