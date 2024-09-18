@@ -451,7 +451,6 @@ class LLMNode(BaseNode):
                 "segment_position": metadata.get("segment_position"),
                 "index_node_hash": metadata.get("segment_index_node_hash"),
                 "content": context_dict.get("content"),
-                "page": metadata.get("page"),
             }
 
             return source
@@ -581,7 +580,7 @@ class LLMNode(BaseNode):
         prompt_messages = prompt_transform.get_prompt(
             prompt_template=node_data.prompt_template,
             inputs=inputs,
-            query=query if query else "",
+            query=query or "",
             files=files,
             context=context,
             memory_config=node_data.memory,

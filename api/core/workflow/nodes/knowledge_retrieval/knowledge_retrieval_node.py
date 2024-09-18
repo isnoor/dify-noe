@@ -128,11 +128,12 @@ class KnowledgeRetrievalNode(BaseNode):
                 weights = None
             elif node_data.multiple_retrieval_config.reranking_mode == "weighted_score":
                 reranking_model = None
+                vector_setting = node_data.multiple_retrieval_config.weights.vector_setting
                 weights = {
                     "vector_setting": {
-                        "vector_weight": node_data.multiple_retrieval_config.weights.vector_setting.vector_weight,
-                        "embedding_provider_name": node_data.multiple_retrieval_config.weights.vector_setting.embedding_provider_name,
-                        "embedding_model_name": node_data.multiple_retrieval_config.weights.vector_setting.embedding_model_name,
+                        "vector_weight": vector_setting.vector_weight,
+                        "embedding_provider_name": vector_setting.embedding_provider_name,
+                        "embedding_model_name": vector_setting.embedding_model_name,
                     },
                     "keyword_setting": {
                         "keyword_weight": node_data.multiple_retrieval_config.weights.keyword_setting.keyword_weight
@@ -163,9 +164,6 @@ class KnowledgeRetrievalNode(BaseNode):
             for item in all_documents:
                 if item.metadata.get("score"):
                     document_score_list[item.metadata["doc_id"]] = item.metadata["score"]
-                # both 'page' and 'score' are metadata fields
-                if item.metadata.get("page"):
-                    page_number_list[item.metadata["doc_id"]] = item.metadata["page"]
 
             index_node_ids = [document.metadata["doc_id"] for document in all_documents]
             segments = DocumentSegment.query.filter(
@@ -200,7 +198,6 @@ class KnowledgeRetrievalNode(BaseNode):
                                 "document_id": document.id,
                                 "document_name": document.name,
                                 "document_data_source_type": document.data_source_type,
-                                "page": page_number_list.get(segment.index_node_id, None),
                                 "segment_id": segment.id,
                                 "retriever_from": "workflow",
                                 "score": document_score_list.get(segment.index_node_id, None),
