@@ -166,8 +166,8 @@ const ExtraInfo = ({ isMobile, relatedApps }: IExtraInfoProps) => {
             className='inline-flex items-center text-xs text-primary-600 mt-2 cursor-pointer'
             href={
               locale === LanguagesSupported[1]
-                ? 'https://docs.dify.ai/v/zh-hans/guides/knowledge-base/integrate_knowledge_within_application'
-                : 'https://docs.dify.ai/guides/knowledge-base/integrate-knowledge-within-application'
+                ? 'https://docs.wavelr.ai/v/zh-hans/guides/knowledge-base/integrate_knowledge_within_application'
+                : 'https://docs.wavelr.ai/guides/knowledge-base/integrate-knowledge-within-application'
             }
             target='_blank' rel='noopener noreferrer'
           >
@@ -223,7 +223,7 @@ const DatasetDetailLayout: FC<IAppDetailLayoutProps> = (props) => {
 
   useEffect(() => {
     if (datasetRes)
-      document.title = `${datasetRes.name || 'Dataset'} - Dify`
+      document.title = `${datasetRes.name || 'Dataset'} - wavelr`
   }, [datasetRes])
 
   const setAppSiderbarExpand = useStore(state => state.setAppSiderbarExpand)
@@ -241,7 +241,7 @@ const DatasetDetailLayout: FC<IAppDetailLayoutProps> = (props) => {
     <div className='grow flex overflow-hidden'>
       {!hideSideBar && <AppSideBar
         title={datasetRes?.name || '--'}
-        icon={datasetRes?.icon || 'https://static.dify.ai/images/dataset-default-icon.png'}
+        icon={datasetRes?.icon || 'https://static.wavelr.ai/images/dataset-default-icon.png'}
         icon_background={datasetRes?.icon_background || '#F5F5F5'}
         desc={datasetRes?.description || '--'}
         isExternal={datasetRes?.provider === 'external'}

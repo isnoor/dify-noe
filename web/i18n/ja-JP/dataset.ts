@@ -12,7 +12,7 @@ const translation = {
   datasetDeleted: 'ナレッジが削除されました',
   datasetDeleteFailed: 'ナレッジの削除に失敗しました',
   didYouKnow: 'ご存知ですか？',
-  intro1: 'ナレッジはDifyアプリケーションに統合することができます',
+  intro1: 'ナレッジはWavelrアプリケーションに統合することができます',
   intro2: 'コンテキストとして',
   intro3: '、',
   intro4: 'または',
@@ -145,7 +145,7 @@ const translation = {
   createExternalAPI: '外部ナレッジ API を追加する',
   externalKnowledgeDescriptionPlaceholder: 'このナレッジベースの内容を説明する(オプション)',
   allExternalTip: '外部ナレッジのみを使用する場合、ユーザーは Rerank モデルを有効にするかどうかを選択できます。有効にしない場合、取得されたチャンクはスコアに基づいて並べ替えられます。異なるナレッジベースの検索戦略に一貫性がない場合、不正確になります。',
-  externalAPIPanelDescription: '外部ナレッジAPIは、Difyの外部のナレッジベースに接続し、そのナレッジベースからナレッジを取得するために使用されます。',
+  externalAPIPanelDescription: '外部ナレッジAPIは、Wavelrの外部のナレッジベースに接続し、そのナレッジベースからナレッジを取得するために使用されます。',
 }
 
 export default translation
